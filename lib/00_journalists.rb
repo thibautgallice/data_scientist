@@ -95,24 +95,24 @@ def yes_or_no(sort_value,journalists)
         puts "Tant pis si tu ne sais pas choisir entre \"y\" ou \"n\" :)"
       end
 end
-
+  puts "\n#{"-"*10} Q1 #{"-"*10}"
   puts "Il y a #{journalists.length} handle de journalistes dans le tableau"
-  puts "\n#{"-"*10}"
+  puts "\n#{"-"*10} Q2 #{"-"*10}"
   search_journalist(journalists,handle_with_number,handle_with_aude,handle_with_at_maj,handle_with_maj,handle_with_underscore)
   puts "Il y a #{handle_with_number.length} handle avec des numéros"
-  puts "\n#{"-"*10}" 
+  puts "\n#{"-"*10} Q3 #{"-"*10}" 
   puts "Il y a #{handle_with_aude.length} handle avec \"Aude\""
-  puts "\n#{"-"*10}" 
+  puts "\n#{"-"*10} Q4 #{"-"*10}" 
   puts "Il y a #{handle_with_at_maj.length} handle qui commencent par une majuscule"
-  puts "\n#{"-"*10}" 
+  puts "\n#{"-"*10} Q5 #{"-"*10}" 
   puts "Il y a #{handle_with_maj.length} handle qui ont une majuscule"
-  puts "\n#{"-"*10}" 
+  puts "\n#{"-"*10} Q6 #{"-"*10}" 
   puts "Il y a #{handle_with_underscore.length} handle qui ont un underscore"
-  puts "\n#{"-"*10}"
+  puts "\n#{"-"*10} Q7 #{"-"*10}"
   puts "Afficher la liste des journalistes triées par ordre alphabétique ? \"y\" ou \"n\""
   sort_journalists(journalists)
-  puts "\n\n#{"-"*10}\nLes 50 handle les plus courts sont :\n"
+  puts "\n\n#{"-"*10} Q8 #{"-"*10}\nLes 50 handle les plus courts sont :\n"
   print journalists.sort_by(&:length).values_at(0..49)
-  puts "\n\n#{"-"*10}"
+  puts "\n\n#{"-"*10} Q9 #{"-"*10}"
   puts "@epenser est placé à la #{journalists.find_index("@epenser")}ème place dans le tableau :)"
   puts "\n#{"-"*10}"
